@@ -1,0 +1,4 @@
+val-dir
+*.png
+*.nii.gz
+*.sh
