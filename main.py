@@ -6,7 +6,6 @@ import glob
 from collections import defaultdict
 import random
 
-
 def gettwofiles():
     # Specify the directory containing the images
     image_folder = 'val_dir'  # Change to your image directory
@@ -110,13 +109,10 @@ while running:
     # Apply the final transform to the moving image (img2)
     img2_aligned = sitk.Resample(img2, img1, final_transform, sitk.sitkLinear, 0.0)
 
-
-
     # Convert images to Pygame surfaces
     img1_surface = sitk_to_pygame(img1)
     img2_surface = sitk_to_pygame(img2)
     img2_aligned_surface = sitk_to_pygame(img2_aligned)
-
 
     # Scale images to fit within the maximum dimension
     max_dimension = 768
